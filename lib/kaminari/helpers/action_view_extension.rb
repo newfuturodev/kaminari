@@ -67,7 +67,6 @@ module Kaminari
       link_to_unless scope.last_page?, name, params.merge(param_name => (scope.current_page + 1), tab_name: param_name), options.reverse_merge(:rel => 'next') do
         block.call if block
       end
-      binding.pry
     end
 
     # Renders a helpful message with numbers of displayed vs. total entries.
